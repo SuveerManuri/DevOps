@@ -1,6 +1,6 @@
 FROM centos:latest
 MAINTAINER suveermanuri
-RUN yum install -y \
+RUN yum install -y httpd \
 zip\
 unzip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page33/neko08.zip /var/www/html/
