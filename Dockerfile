@@ -3,10 +3,10 @@ MAINTAINER suveermanuri
 RUN yum install httpd -y
 RUN yum install zip -y
 RUN yum install unzip -y
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page33/neko08.zip /var/www/html/
+ADD https://github.com/SuveerManuri/carweb.git /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip neko08.zip
-RUN cp -rvf neko08/* .
-RUN rm -rf neko08 neko08.zip
+RUN unzip carwebsite.zip
+RUN cp -rvf carwebsite/* .
+RUN rm -rf carwebsite carwebsite.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPOSE 80 22
+EXPOSE 80
