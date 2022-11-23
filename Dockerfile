@@ -1,5 +1,5 @@
 FROM centos:latest
-MAINTAINER suveermanuri
+LABEL maintainer="suveermanuri"
 RUN yum install httpd -y
 RUN yum install zip -y
 RUN yum install unzip -y
