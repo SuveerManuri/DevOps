@@ -1,8 +1,8 @@
 FROM centos:latest
 LABEL maintainer="suveermanuri"
-RUN yum install httpd -y
-RUN yum install zip -y
-RUN yum install unzip -y
+RUN yum install -y httpd \
+zip\
+unzip
 ADD https://github.com/SuveerManuri/carweb.git /var/www/html/
 WORKDIR /var/www/html/
 RUN unzip carwebsite.zip
