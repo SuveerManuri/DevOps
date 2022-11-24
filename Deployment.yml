@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: suveerbuilds
+spec:
+   replicas: 2
+   selector:    # tells the controller, which pods to watch/belongs to
+    matchLabels:
+     app: suveerbuilds
+   template:
+      metadata:
+        labels:
+          app: suveerbuilds
+      spec:
+         containers:
+          - name: suveerc00
+            image: suveermanuri/dev
+            imagePullPolicy: Always
+            ports:
+              - containerPort: 80 
